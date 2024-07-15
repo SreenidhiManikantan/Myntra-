@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionApp</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p, a, nav, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Container */
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background-color: #3B0C1D;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background: url('https://i.pinimg.com/originals/ef/70/85/ef7085be91d78613f0938fee57e45f4a.jpg') no-repeat center center/cover;
+            border-bottom: 1px solid #eee;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand {
+            font-size: 1.8em;
+            color: #ff6f61;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ff6f61;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background: url('new-banner.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e65550;
+        }
+
+        /* Features Section Styles */
+        .features {
+            padding: 50px 0;
+            text-align: center;
+            background: url('https://i.pinimg.com/originals/ef/70/85/ef7085be91d78613f0938fee57e45f4a.jpg') no-repeat center center/cover;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .features .feature {
+            margin-bottom: 30px;
+        }
+        .features h2 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            color: #ff6f61;
+        }
+        .features p {
+            font-size: 1.2em;
+            color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: url('footer-background.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="brand">FashionApp</a>
+            <ul class="nav-links">
+                <li><a href="home page.html">Home</a></li>
+                <li><a href="ai scan.html">AI Scanner</a></li>
+                <li><a href="index.html">Celebrity Styles</a></li>
+                <li><a href="#stylist">Virtual Stylist</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Welcome to FashionApp</h1>
+            <p>Scan, Style, and Shine with the Latest Trends</p>
+            <a href="#scanner" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="feature">
+                <h2>AI-Driven Fashion Scanner</h2>
+                <p>Scan your favorite clothing items and find similar trending products.</p>
+            </div>
+            <div class="feature">
+                <h2>Celebrity Integration</h2>
+                <p>See how your favorite celebrities are wearing similar styles.</p>
+            </div>
+            <div class="feature">
+                <h2>Virtual Stylist</h2>
+                <p>Get personalized fashion recommendations from our AI stylist.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FashionApp. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
