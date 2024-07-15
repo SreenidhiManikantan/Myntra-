@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Fashion Try-On</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .main-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #282c34;
+      color: white;
+      text-align: center;
+    }
+    .main-page h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    .main-page p {
+      font-size: 1.2em;
+    }
+    .main-page .enter-vr {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #61dafb;
+      color: #282c34;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .main-page .enter-vr:hover {
+      background: #21a1f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-page">
+    <h1>Welcome to the AR Fashion TRYON</h1>
+    <p>Experience the latest in virtual fashion.</p>
+    <a href="https://readyplayer.me/gallery/66949cb41847c40762d06832" class="enter-vr">Enter AR</a>
+  </div>
+</body>
+</html>
