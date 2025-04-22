@@ -1,0 +1,27 @@
+ import google.generativeai as genai
+
+API_KEY = 'AIzaSyDr56-mexQKKQjz_xlTmI0LEk793nD31Dk'
+
+genai.configure(api_key=API_KEY)
+
+def chatbot():
+
+print("Chatbot: Hello! Type 'exit' to end the chat.")
+
+model = genai.GenerativeModel("gemini-1.5-pro-latest")
+
+while True:
+
+user_input = input("You: ")
+
+if user_input.lower() == "exit":
+
+print("Chatbot: Goodbye!")
+
+break
+
+response = model.generate_content(user_input)
+
+print("Chatbot:", response.text)
+
+chatbot()
