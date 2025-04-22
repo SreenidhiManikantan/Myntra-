@@ -1,0 +1,31 @@
+import cv2, numpy as np, matplotlib.pyplot as plt
+
+from deepface import DeepFace
+
+# Load image
+img = cv2.imread("/content/images (1).jpeg")
+if img is None: raise ValueError("Image not found!")
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+# Analyze emotion
+result = DeepFace.analyze(img_path=img_rgb, actions=['emotion'],␣
+↪enforce_detection=False)[0]
+emotion = result['dominant_emotion']
+# Map emotion to sentiment
+sentiment_map = {
+"happy": "Positive", "surprise": "Positive",
+"neutral": "Neutral",
+"sad": "Negative", "angry": "Negative", "fear": "Negative", "disgust":␣
+↪"Negative"
+}
+sentiment = sentiment_map.get(emotion, "Neutral")
+# Add text to image
+font = cv2.FONT_HERSHEY_SIMPLEX
+cv2.putText(img, f"Emotion: {emotion}", (10, 50), 0, 0.5, (0, 255, 0), 1)
+cv2.putText(img, f"Sentiment: {sentiment}", (10, 90), 0, 0.5, (255, 0, 0), 1)
+# Show result
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.title(f"Emotion: {emotion}, Sentiment: {sentiment}")
+plt.axis("off")
+plt.show()
+print("Detected Emotion:", emotion)
+print("Predicted Sentiment:", sentiment)
